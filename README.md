@@ -1,2 +1,2 @@
-# FAKE SITE
-A fake site developed for train my self about CSS3 flexbox layout model.
+# FAKE HEALTH WEBSITE
+A fake health website developed to train my self about CSS3 flexbox layout model.
