@@ -1,7 +1,9 @@
 :root {
     --font-primary: "Arial";
+    --font-secundary: "Georgia";
     --color-primary: #515151;
     --color-secundary: #ffffff;
+    --color-background: rgb(0, 199, 213);
 }
 
 * {
@@ -20,7 +22,7 @@ header {
 }
 
 .container {
-    width: 90vw;
+    width: 85vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,18 +53,234 @@ header {
     font-family: var(--font-primary);
     font-weight: 600;
     font-size: 0.9rem;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .menu nav ul .active a,
 .menu nav ul li a:hover {
-    background-color: rgb(0, 199, 213);
-    color: white;
+    background-color: var(--color-background);
+    color: var(--color-secundary);
 }
 
 #home-banner {
     background-image: url('../images/home-banner.jpg');
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+    align-items: normal;
+}
+
+/* flex igual á 1 para que o tamanho fique variável em relação ao espeço disponível */
+.banner-headline {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-secundary)
+}
+
+.banner-headline h1 {
+    max-width: 600px;
+    font-size: 4rem;
+    font-family: var(--font-primary);
+    text-shadow: 3px 3px #2f2f2f;
+}
+
+.banner-headline h2 {
+    max-width: 500px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-family: var(--font-secundary);
+    text-shadow: 1px 1px #2f2f2f;
+}
+
+/* aqui deixamos um tamanho fixo */
+.banner-options {
+    height: 40%;
+    display: flex;
+}
+
+/* todos flex 1 para ocupar mesmo tamanho disponível */
+.option1,
+.option2,
+.option3 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    color: var(--color-secundary);
+}
+
+.option1 {
+    background-color: rgb(0, 164, 240);
+}
+.option2 {
+    background-color: rgb(0, 116, 155);
+}
+.option3 {
+    justify-content: unset;
+    background-color: rgb(0, 52, 84);
+}
+
+.option-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--font-primary);
+}
+.option-desc {
+    font-size: 1rem;
+    font-weight: lighter;
+    letter-spacing: 1.2px;
+    margin: 20px 0 30px 0;
+}
+.option-table {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.option-table .table-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 2px solid rgb(0, 62, 100);
+}
+
+.banner-options a {
+    font-family: var(--font-secundary);
+    width: fit-content;
+    border: 1px solid #fff;
+    color: var(--color-secundary);
+    padding: 5px 10px;
+}
+
+.banner-options a i {
+    margin-left: 10px;
+}
+
+.banner-options a:hover {
+    opacity: 20%;
+}
+
+#home-view {
+    display: flex;
+    justify-content: center;
+}
+
+#home-view .view-container {
+    align-items: normal;
+}
+
+#home-view section {
+    flex: 2;
+}
+
+#home-view aside {
+    flex: 1;
+}
+
+#home-view .news,
+#home-view .departments,
+#home-view .appointments,
+#home-view .title {
+    display: flex;
+    flex-direction: column;
+}
+
+#home-view .title {
+    margin: 20px 0 30px 0;
+}
+
+#home-view .title .title-text {
+    font-family: var(--font-secundary);
+    font-weight: 900;
+    color: #2f2f2f;
+    letter-spacing: 0.5px;
+}
+#home-view .title .title-bar {
+    width: 80px;
+    height: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #00c8ff;
+}
+
+#home-view .content.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content.column .card-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.content.column .card-group .card {
+    flex: 1;
+    min-width: 150px;
+    height: 200px;
+    background-color: rgb(0, 116, 155);
+}
+
+#home-view .content.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content.row article {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    margin: 0 30px 40px 0;
+}
+
+article .news-date {
+    display: flex;
+    gap: 5px;
+    color: var(--color-secundary);
+}
+
+article .news-posted-at {
+    padding: 10px;
+    background-color: rgb(0, 62, 100);
+}
+
+article .news-comments {
+    padding: 10px;
+    background-color: rgb(0, 199, 213);
+}
+
+article .news-thumbnail {
+    margin: 20px 0;
+}
+
+article .news-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+article .news-title {
+    font-family: var(--font-secundary);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 20px 0 25px 0;
+}
+
+article .news-desc {
+    color: #515151;
+    line-height: 25px;
 }
