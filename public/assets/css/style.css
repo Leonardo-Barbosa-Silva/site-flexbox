@@ -547,4 +547,41 @@ footer #footer-menu .content a:hover {
         flex-direction: column;
         height: auto;
     }
+
+    .appointments-text {
+        font-size: 16px;
+    }
+    
+    .appointments-contact .contact {
+        font-size: 14px;
+    }
+
+    article .news-title {
+        font-family: var(--font-secundary);
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: #000000;
+        margin: 20px 0 25px 0;
+    }
+    
+    article .news-desc {
+        color: #515151;
+        line-height: 20px;
+        font-size: 0.9rem;
+    }
+
+    footer #footer-menu .title {
+        font-size: 1rem;
+    }
+    
+    footer #footer-menu .content a {
+        font-size: 0.8rem;
+    }
+
+    .clinic .content,
+    .posts .content,
+    .tweets .content {
+        font-size: 14px;
+}
+    
 }
