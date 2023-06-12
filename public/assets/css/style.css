@@ -530,6 +530,17 @@ footer #footer-menu .content a:hover {
 
     header .menu nav ul {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background-color: #ffffff;
+        right: 0;
+        top: 100px;
+        transition: all ease;
+    }
+
+    header .menu nav ul li {
+        margin: 20px 0;
     }
 
     header .menu-mobile .menu-line {
@@ -582,6 +593,6 @@ footer #footer-menu .content a:hover {
     .posts .content,
     .tweets .content {
         font-size: 14px;
-}
+    }
     
 }
