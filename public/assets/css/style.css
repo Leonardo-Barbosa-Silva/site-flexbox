@@ -291,7 +291,7 @@ header {
     flex: 1;
     min-width: 300px;
     max-width: 450px;
-    margin: 0 30px 40px 0;
+    padding: 0 30px 30px 0;
 }
 
 article .news-date {
@@ -383,7 +383,6 @@ footer #footer-menu .content a:hover {
 
 #footer-infos {
     display: flex;
-    padding: 20px 0 50px 0;
     border-bottom: 2px solid #313131;
 }
 
@@ -408,6 +407,7 @@ footer #footer-menu .content a:hover {
 .posts,
 .tweets {
     flex: 1;
+    padding: 20px 0;
 }
 
 .clinic .content {
@@ -557,14 +557,31 @@ footer #footer-menu .content a:hover {
     #home-banner .banner-options {
         flex-direction: column;
         height: auto;
+        min-width: 0;
+    }
+
+    #home-view .container.view-container {
+        flex-direction: column;
     }
 
     .appointments-text {
         font-size: 16px;
     }
+
+    .appointments-contact .contact {
+        flex-direction: column;
+    }
+
     
     .appointments-contact .contact {
         font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .news .content.row article {
+        min-width: 200px;
+        padding: 30px 0;
+        margin: 0;
     }
 
     article .news-title {
@@ -581,7 +598,14 @@ footer #footer-menu .content a:hover {
         font-size: 0.9rem;
     }
 
-    footer #footer-menu .title {
+    footer #footer-menu,
+    footer #footer-infos {
+        flex-direction: column;
+        height: auto;
+    }
+
+    footer #footer-menu .title,
+    footer #footer-infos .title {
         font-size: 1rem;
     }
     
@@ -593,6 +617,10 @@ footer #footer-menu .content a:hover {
     .posts .content,
     .tweets .content {
         font-size: 14px;
+    }
+
+    #copy {
+        font-size: 12px;
     }
     
 }
